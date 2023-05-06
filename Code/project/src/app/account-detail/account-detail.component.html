@@ -1,0 +1,345 @@
+
+
+<!-- Account Id: <input type="text" #id>
+<button (click)="searchAccount(id.value)">Search</button> -->
+
+
+<!-- <p>{{account.AccountId}}</p>
+<p>{{account.AccountName}}</p>
+<p>{{account.SDT}}</p>
+
+<p>helo</p> -->
+
+
+ <div class="main">
+  <div class="tab">
+      <div class="avatar">
+           <img src="assets/image_account/hình.png" alt="No image" width="100px" disabled style="margin-top: 100px;">
+
+           <hr width="240px">
+      </div>
+      <!-- <div class="general1">
+        <div class="">
+        <button type="submit">Chọn ảnh</button>
+      </div>
+        <p class="note">Dụng lượng file tối đa 1 MB <br>
+          Định dạng:.JPEG, .PNG</p>
+      </div> -->
+      <hr width="240px">
+      <button class="tablinks" id="defaultOpen" >Tài khoản của tôi</button>
+
+      <button class="tablinks" (click)="openMenu()">Sửa thông tin</button>
+      <button class="tablinks" (click)="openMenu2()">Đơn đã đặt</button>
+  </div>
+  <div id="general" class="tabcontent">
+    <h2 style="margin-top: 100px;">Thông tin chung</h2>
+    <p>Quản lý thông tin hồ sơ để bảo vệ tài khoản</p>
+    <div class="gen">
+    <div class="general1">
+      <form class="form1">
+      <div class="form_row" let>
+        <label class="form_label">Tên đăng nhập</label>
+        <!-- <input type="text" class="form_input" value="gofooder"> -->
+        <!-- <p>{{account.AccountName}}</p> -->
+        <p class="form_input">{{account.AccountName}}</p>
+      </div>
+      <!-- <div class="form_row">
+        <label class="form_label">Tên</label> -->
+        <!-- <input type="text" class="form_input" value="Nguyễn Quang Phúc"> -->
+        <!-- <p class="form_input">{{account.A}}</p>
+      </div> -->
+      <div class="form_row">
+        <label class="form_label">Email</label>
+        <!-- <input type="text" class="form_input" value="gofooder@gmail.com" id="email" name="email"> -->
+        <p class="form_input">{{account.Email}}</p>
+      </div>
+      <div class="form_row">
+        <label class="form_label">Số điện thoại</label>
+        <!-- <input type="text" class="form_input" value="********34"> -->
+        <p class="form_input">{{account.SDT}}</p>
+      </div>
+      <!-- <div class="form_row1">
+        <label class="form_label">Giới tính</label>
+        <div class="radio">
+        <input type="radio" id="A" name="select" value="0" checked> Nam
+        <input type="radio" id="B" name="select" value="1"> Nữ
+        <input type="radio" id="D" name="select" value="3" > Khác
+        </div>
+      </div>
+      <div class="form_row2">
+        <label class="form_label">Ngày sinh
+        </label>
+        <select>
+          <option value="0">1</option>
+          <option value="1" selected>2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+          <option value="4">5</option>
+          <option value="5">6</option>
+          <option value="6">7</option>
+          <option value="7">8</option>
+          <option value="8">9</option>
+          <option value="9">10</option>
+          <option value="10">11</option>
+          <option value="11">12</option>
+          <option value="12">13</option>
+          <option value="13">14</option>
+          <option value="14">15</option>
+          <option value="15">16</option>
+          <option value="16">17</option>
+          <option value="17">18</option>
+          <option value="18">19</option>
+          <option value="19">20</option>
+          <option value="20">21</option>
+          <option value="21">22</option>
+          <option value="22">23</option>
+          <option value="23">24</option>
+          <option value="24">25</option>
+          <option value="25">26</option>
+          <option value="26">27</option>
+          <option value="27">28</option>
+          <option value="28">29</option>
+          <option value="29">30</option>
+          <option value="30">31</option>
+      </select> -->
+      <!-- <select>
+        <option value="0">Tháng 1</option>
+        <option value="1">Tháng 2</option>
+        <option value="2">Tháng 3</option>
+        <option value="3">Tháng 4</option>
+        <option value="4">Tháng 5</option>
+        <option value="5">Tháng 6</option>
+        <option value="6">Tháng 7</option>
+        <option value="7">Tháng 8</option>
+        <option value="8">Tháng 9</option>
+        <option value="9">Tháng 10</option>
+        <option value="10">Tháng 11</option>
+        <option value="11">Tháng 12</option>
+      </select>
+      <select>
+        <option value="">1970</option>
+        <option value="">1971</option>
+        <option value="">1972</option>
+        <option value="">1973</option>
+        <option value="">1974</option>
+        <option value="">1975</option>
+        <option value="">1976</option>
+        <option value="">1977</option>
+        <option value="">1978</option>
+        <option value="">1979</option>
+        <option value="">1980</option>
+        <option value="">1981</option>
+        <option value="">1982</option>
+        <option value="">1983</option>
+        <option value="">1985</option>
+        <option value="">1985</option>
+        <option value="">1986</option>
+        <option value="">1987</option>
+        <option value="">1988</option>
+        <option value="">1989</option>
+        <option value="">1990</option>
+        <option value="">1991</option>
+        <option value="">1992</option>
+        <option value="">1993</option>
+        <option value="">1994</option>
+        <option value="">1995</option>
+        <option value="">1996</option>
+        <option value="">1997</option>
+        <option value="">1998</option>
+        <option value="">1999</option>
+        <option value="">2000</option>
+        <option value="">2001</option>
+        <option value="">2002</option>
+        <option value="">2003</option>
+        <option value="">2004</option>
+        <option value="">2005</option>
+        <option value="">2006</option>
+        <option value="">2007</option>
+        <option value="">2008</option>
+        <option value="">2009</option>
+        <option value="">2010</option>
+        <option value="">2011</option>
+        <option value="">2012</option>
+
+      </select> -->
+    <!-- </div> -->
+    <!-- <div class="form_row">
+       <button type="submit">Lưu</button>
+    </div> -->
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div id="order" class="tabcontent">
+    <h2>Đơn đã đặt</h2>
+    <div class="don">
+      <img src="assets/image2/mon 1.jfif" alt="No image" width="100px">
+      <h4 style="padding-top:20px">Bún sốt cá hồi</h4>
+      <div class="it">
+        <div class="t1">
+          <p width="30px">Số lượng: x1</p>
+        </div>
+        <div class="t1">
+          <p style="float: right"><span style="color: gray;">65.000đ</span>  60.000đ</p>
+        </div>
+      </div>
+      <hr>
+      <p style="text-align: right;">Tổng số tiền:   <span style="color: red; font-size:30px">65.000đ</span></p>
+      <div class="add">
+        <div class="t2">
+        <p style="color: red;">Đã giao</p>
+      </div>
+      <div class="t2">
+        <button>Đánh giá</button>
+        <button>Mua lại</button>
+      </div>
+
+      </div>
+    </div>
+    <div class="don">
+      <img src="assets/image2/mon2.jfif" alt="No image" width="100px">
+      <h4 style="padding-top:20px">Cơm cá hồi nướng</h4>
+      <div class="it">
+        <div class="t1">
+          <p width="30px">Số lượng: x1</p>
+        </div>
+        <div class="t1">
+          <p style="float: right"><span style="color: gray;">65.000đ</span>  60.000đ</p>
+        </div>
+      </div>
+      <hr>
+      <p style="text-align: right;">Tổng số tiền:   <span style="color: red; font-size:30px">65.000đ</span></p>
+      <div class="add">
+        <div class="t2">
+        <p style="color: red;">Đã giao</p>
+      </div>
+      <div class="t2">
+        <button>Đánh giá</button>
+        <button>Mua lại</button>
+      </div>
+
+      </div>
+    </div>
+    <div class="don">
+      <img src="assets/image2/mon3.jfif" alt="No image" width="100px">
+      <h4 style="padding-top:20px">Cơm thịt bò nướng</h4>
+      <div class="it">
+        <div class="t1">
+          <p width="30px">Số lượng: x1</p>
+        </div>
+        <div class="t1">
+          <p style="float: right"><span style="color: gray;">65.000đ</span>  60.000đ</p>
+        </div>
+      </div>
+      <hr>
+      <p style="text-align: right;">Tổng số tiền:   <span style="color: red; font-size:30px">65.000đ</span></p>
+      <div class="add">
+        <div class="t2">
+        <p style="color: red;">Đã giao</p>
+      </div>
+      <div class="t2">
+        <button>Đánh giá</button>
+        <button>Mua lại</button>
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div id="point" class="tabcontent">
+    <h2>Điểm tích lũy</h2>
+    <p><img src="assets/image2/coin.png" alt="No image" width="30px"><span>0 point</span></p>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+
+        <img src="assets/image2/1.png" style="width:100%" >
+
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/image2/2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/image2/3.png" style="width:100%;">
+      </div>
+
+      </div>
+      <br>
+
+      <div class="next" style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+  </div> -->
+
+<!-- <script>
+  function openMenu(evt, cityName) {
+  var i, tabcontent1, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+
+}
+document.getElementById("defaultOpen").click();
+
+
+
+var dropdown = document.getElementsByClassName("tablinks2");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+function openMenu2(evt, cityName) {
+  var i, tabcontent, tablinks3;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks3 = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks3.length; i++) {
+    tablinks3[i].className = tablinks3[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+let slideIndex = 0;
+showSlides();
+
+
+function submit(){
+var email=getUrlParams2().get("email");
+document.getElementById("email").innerHTML=email;
+}
+$(document).ready(function() {
+$('#toggle').click(function() {
+    $('nav').slideToggle();
+});
+})
+
+
+</script> -->
+

@@ -1,0 +1,46 @@
+<header>
+  <div class="left"><a href="#"><img src="assets/image_login/logo.png" width="190px"></a></div>
+  <div class="right" style="float: right;"><a href="#" class="btn">Bạn cần trợ giúp ?</a></div>
+</header>
+<section>
+<div class="img-bg">
+  <div class="login-image"><img src="assets/image_login/heabg.png"></div>
+</div>
+<div class="noi-dung">
+  <div class="form">
+      <h2 >ĐĂNG NHẬP </h2>
+      <form  class="login_form" method="post">
+        <div class="input-form">
+          <p style="text-align:center ;">Bạn đã có tài khoản chưa? <a href="">Đăng ký</a></p>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="input-form">
+          <input type="email" placeholder="Email" formControlName="email"/>
+          <div class="error-list" *ngIf="loginForm.get('email')?.errors && isSubmitted">
+            <div *ngIf="loginForm.get('email')?.errors?.['required']">Chưa nhập Email</div>
+            <div *ngIf="loginForm.get('email')?.errors?.['email']">Email chưa đúng</div>
+          </div> <br>
+          <input type="password" placeholder="Mật khẩu" formControlName="password"/>
+          <div class="error-list" *ngIf="loginForm.get('password')?.errors && isSubmitted">
+            <div *ngIf="loginForm.get('password')?.errors?.['required']">Chưa nhập mật khẩu</div>
+          </div>
+        </div>
+
+        <div class="input-form">
+          <button type="submit" id="DANGNHAP" style="text-decoration: none;">ĐĂNG NHẬP</button>
+        </div>
+        <a href="" style="text-decoration: none;"> Quên mật khẩu</a>
+      <ul class="icon-dang-nhap">
+          <li>
+          <button type="button" onclick="loginGG()">
+            <img src="assets/image_login/gg.png" style="width: 1em; margin: 0.2em;"> Đăng nhập với Google
+          </button>
+          <li>
+          <button type="button" onclick="loginFB()">
+            <img src="assets/image_login/fb.png" style="width: 1em; margin: 0.2em;"> Đăng nhập với Facebook
+          </button>
+
+        </ul>
+
+

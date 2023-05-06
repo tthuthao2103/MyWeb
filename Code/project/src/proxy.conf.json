@@ -1,0 +1,31 @@
+
+[
+  {
+    "context": ["/*"],
+    "target": "http://localhost:5000",
+    "secure": false,
+    "changeOrigin":true,
+    "logLevel":"debug"
+  },
+  {
+    "context": ["/account"],
+    "target": "http://localhost:5000",
+    "secure": false,
+    "changeOrigin":true,
+    "logLevel":"debug"
+  },
+  {
+    "context": ["/login"],
+    "target": "http://localhost:5000",
+    "secure": false,
+    "changeOrigin":true,
+    "logLevel":"debug"
+  },
+  {
+    "context": ["/upload"],
+    "target": "http://localhost:5000",
+    "secure": false,
+    "changeOrigin":true,
+    "logLevel":"debug"
+  }
+]
